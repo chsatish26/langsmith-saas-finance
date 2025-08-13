@@ -1,0 +1,54 @@
+{
+  "insights": {
+    "by_category": [
+      {
+        "category": "Rent",
+        "total_spend": 1500.0,
+        "n": 1
+      },
+      {
+        "category": "Groceries",
+        "total_spend": 85.2,
+        "n": 2
+      },
+      {
+        "category": "Gas",
+        "total_spend": 42.1,
+        "n": 1
+      },
+      {
+        "category": "Transport",
+        "total_spend": 18.5,
+        "n": 1
+      },
+      {
+        "category": "Entertainment",
+        "total_spend": 15.99,
+        "n": 1
+      }
+    ],
+    "top_merchants": [
+      {
+        "merchant": "RENT *",
+        "total_spend": 1500.0
+      },
+      {
+        "merchant": "WHOLEFOODS",
+        "total_spend": 85.2
+      },
+      {
+        "merchant": "SHELL",
+        "total_spend": 42.1
+      },
+      {
+        "merchant": "UBER",
+        "total_spend": 18.5
+      },
+      {
+        "merchant": "NETFLIX",
+        "total_spend": 15.99
+      }
+    ],
+    "possible_recurring": []
+  }
+}

@@ -1,0 +1,3 @@
+{"borrower_id": "b1", "loan_balance": 400000, "current_rate": 0.065, "remaining_term_months": 300}
+{"borrower_id": "b2", "loan_balance": 280000, "current_rate": 0.072, "remaining_term_months": 240}
+{"borrower_id": "b3", "loan_balance": 520000, "current_rate": 0.061, "remaining_term_months": 330}

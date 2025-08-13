@@ -1,0 +1,7 @@
+id,date,description,merchant,amount,type,account_id,category
+t1,2025-07-01,WholeFoods Austin,WHOLEFOODS,85.20,debit,acc1,
+t2,2025-07-02,Uber trip downtown,UBER,18.50,debit,acc1,
+t3,2025-07-03,Monthly Rent,RENT *,1500.00,debit,acc1,
+t4,2025-07-04,Netflix monthly,NETFLIX,15.99,debit,acc1,
+t5,2025-07-05,Shell Fuel,SHELL,42.10,debit,acc1,
+t6,2025-07-06,Refund - Walmart,WALMART,25.00,credit,acc1,

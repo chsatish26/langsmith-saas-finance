@@ -1,0 +1,29 @@
+
+classifier:
+  description: Categorizes transactions
+  tools: [categorize, budget_insights]
+  memory_turns: 6
+budget_reporter:
+  description: Produces budget insights
+  tools: [budget_insights]
+  memory_turns: 6
+planner:
+  description: Computes DTI/LTV/max loan
+  tools: [compute_dti, compute_ltv, max_loan_estimate]
+  memory_turns: 6
+compliance:
+  description: Checks policy flags and docs
+  tools: [policy_check]
+  memory_turns: 6
+rate_retriever:
+  description: Picks best market rate for term
+  tools: [load_rates]
+  memory_turns: 6
+savings_calculator:
+  description: Calculates monthly savings for refi
+  tools: [calculate_savings]
+  memory_turns: 6
+alert:
+  description: Applies threshold to trigger alerts
+  tools: [should_alert]
+  memory_turns: 6

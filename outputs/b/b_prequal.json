@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "borrower_id": "b1",
+      "calc": {
+        "dti": 0.4165,
+        "ltv": 0.8,
+        "max_loan": 386034.4
+      },
+      "policy_flags": [],
+      "docs": [
+        "Pay stubs",
+        "W-2",
+        "Bank statements"
+      ]
+    },
+    {
+      "borrower_id": "b2",
+      "calc": {
+        "dti": 0.6676,
+        "ltv": 0.9429,
+        "max_loan": 104419.14
+      },
+      "policy_flags": [
+        "DTI>43%",
+        "LowFICO"
+      ],
+      "docs": [
+        "Pay stubs",
+        "W-2",
+        "Bank statements"
+      ]
+    }
+  ]
+}

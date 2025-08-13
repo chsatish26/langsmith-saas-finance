@@ -1,0 +1,7 @@
+max_dti: 0.43
+min_fico: 620
+max_ltv: 0.97
+required_docs:
+  - Pay stubs
+  - W-2
+  - Bank statements

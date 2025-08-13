@@ -1,0 +1,19 @@
+
+categorize:
+  impl: agent_platform.tools.categorize
+budget_insights:
+  impl: agent_platform.tools.budget_insights
+compute_dti:
+  impl: agent_platform.tools.compute_dti
+compute_ltv:
+  impl: agent_platform.tools.compute_ltv
+max_loan_estimate:
+  impl: agent_platform.tools.max_loan_estimate
+policy_check:
+  impl: agent_platform.tools.policy_check
+load_rates:
+  impl: agent_platform.tools.load_rates_jsonl
+calculate_savings:
+  impl: agent_platform.tools.calculate_savings
+should_alert:
+  impl: agent_platform.tools.should_alert

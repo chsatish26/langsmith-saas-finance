@@ -1,0 +1,29 @@
+{
+  "market_rate": 0.055,
+  "alerts": [
+    {
+      "borrower_id": "b1",
+      "current_rate": 0.065,
+      "market_rate": 0.055,
+      "monthly_savings": 244.48,
+      "refi_alert": "Yes",
+      "notes": []
+    },
+    {
+      "borrower_id": "b2",
+      "current_rate": 0.072,
+      "market_rate": 0.055,
+      "monthly_savings": 278.49,
+      "refi_alert": "Yes",
+      "notes": []
+    },
+    {
+      "borrower_id": "b3",
+      "current_rate": 0.061,
+      "market_rate": 0.055,
+      "monthly_savings": 193.92,
+      "refi_alert": "Yes",
+      "notes": []
+    }
+  ]
+}
