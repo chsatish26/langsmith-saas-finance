@@ -8,19 +8,11 @@
     "env": {
       "PYTHONPATH": "."
     },
+    "dependencies": ["."],
     "graphs": {
-      "transactions": {
-        "entrypoint": "usecases.transaction_classifier_budget.api:build_graph",
-        "route": "/graphs/transactions"
-      },
-      "mortgage_prequal": {
-        "entrypoint": "usecases.mortgage_prequal_advisor.api:build_graph",
-        "route": "/graphs/mortgage-prequal"
-      },
-      "mortgage_refi_alerts": {
-        "entrypoint": "usecases.mortgage_rate_monitoring.api:build_graph",
-        "route": "/graphs/mortgage-refi"
-      }
+      "transactions": "./usecases/transaction_classifier_budget/api.py:build_graph",
+      "mortgage-prequal": "./usecases/mortgage_prequal_advisor/api.py:build_graph",
+      "mortgage-refi": "./usecases/mortgage_rate_monitoring/api.py:build_graph"
     }
   }
   
