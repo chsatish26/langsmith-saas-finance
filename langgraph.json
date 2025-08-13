@@ -1,0 +1,26 @@
+{
+    "service": {
+      "name": "langsmith-saas",
+      "version": "0.1.0",
+      "port": 8123,
+      "log_level": "INFO"
+    },
+    "env": {
+      "PYTHONPATH": "."
+    },
+    "graphs": {
+      "transactions": {
+        "entrypoint": "usecases.transaction_classifier_budget.api:build_graph",
+        "route": "/graphs/transactions"
+      },
+      "mortgage_prequal": {
+        "entrypoint": "usecases.mortgage_prequal_advisor.api:build_graph",
+        "route": "/graphs/mortgage-prequal"
+      },
+      "mortgage_refi_alerts": {
+        "entrypoint": "usecases.mortgage_rate_monitoring.api:build_graph",
+        "route": "/graphs/mortgage-refi"
+      }
+    }
+  }
+  
