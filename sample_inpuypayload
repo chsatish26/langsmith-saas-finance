@@ -1,0 +1,223 @@
+Transactions — Classifier & Budget Insights
+{
+  "transactions": [
+    {
+      "id": "t1",
+      "date": "2025-07-01",
+      "description": "WholeFoods Austin",
+      "merchant": "WHOLEFOODS",
+      "amount": 85.20,
+      "type": "debit",
+      "account_id": "acc1"
+    },
+    {
+      "id": "t2",
+      "date": "2025-07-02",
+      "description": "Uber trip downtown",
+      "merchant": "UBER",
+      "amount": 18.50,
+      "type": "debit",
+      "account_id": "acc1"
+    },
+    {
+      "id": "t3",
+      "date": "2025-07-03",
+      "description": "Monthly Rent",
+      "merchant": "RENT *",
+      "amount": 1500.00,
+      "type": "debit",
+      "account_id": "acc1"
+    }
+  ],
+  "insights": {}
+}
+
+cURL
+BASE_URL="https://<your-domain>"
+API_KEY="<if-required>"
+
+curl -X POST "$BASE_URL/graphs/transactions/invoke" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $API_KEY" \
+  -d @- <<'JSON'
+{
+  "transactions": [
+    {"id":"t1","date":"2025-07-01","description":"WholeFoods Austin","merchant":"WHOLEFOODS","amount":85.20,"type":"debit","account_id":"acc1"},
+    {"id":"t2","date":"2025-07-02","description":"Uber trip downtown","merchant":"UBER","amount":18.50,"type":"debit","account_id":"acc1"},
+    {"id":"t3","date":"2025-07-03","description":"Monthly Rent","merchant":"RENT *","amount":1500.00,"type":"debit","account_id":"acc1"}
+  ],
+  "insights": {}
+}
+JSON
+
+
+Python Code
+
+import requests, json
+BASE_URL = "https://<your-domain>"
+API_KEY = "<if-required>"
+
+payload = {
+  "transactions": [
+    {"id":"t1","date":"2025-07-01","description":"WholeFoods Austin","merchant":"WHOLEFOODS","amount":85.20,"type":"debit","account_id":"acc1"},
+    {"id":"t2","date":"2025-07-02","description":"Uber trip downtown","merchant":"UBER","amount":18.50,"type":"debit","account_id":"acc1"},
+    {"id":"t3","date":"2025-07-03","description":"Monthly Rent","merchant":"RENT *","amount":1500.00,"type":"debit","account_id":"acc1"}
+  ],
+  "insights": {}
+}
+
+r = requests.post(
+    f"{BASE_URL}/graphs/transactions/invoke",
+    headers={"Content-Type":"application/json","Authorization":f"Bearer {API_KEY}"},
+    data=json.dumps(payload)
+)
+print(r.status_code, r.text)
+
+
+
+
+Mortgage Pre‑Qual — Planner → Compliance
+
+{
+  "profile": {
+    "borrower_id": "b1",
+    "income_monthly": 9000,
+    "debts_monthly": 800,
+    "fico": 700,
+    "home_price": 500000,
+    "down_payment": 100000,
+    "interest_rate": 0.065,
+    "prop_tax_monthly": 300,
+    "insurance_monthly": 120
+  },
+  "calc": {},
+  "policy_flags": [],
+  "docs": []
+}
+
+
+cURL
+curl -X POST "$BASE_URL/graphs/mortgage-prequal/invoke" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $API_KEY" \
+  -d @- <<'JSON'
+{
+  "profile": {
+    "borrower_id": "b1",
+    "income_monthly": 9000,
+    "debts_monthly": 800,
+    "fico": 700,
+    "home_price": 500000,
+    "down_payment": 100000,
+    "interest_rate": 0.065,
+    "prop_tax_monthly": 300,
+    "insurance_monthly": 120
+  },
+  "calc": {},
+  "policy_flags": [],
+  "docs": []
+}
+JSON
+
+
+Python - Code
+
+import requests, json
+BASE_URL = "https://<your-domain>"
+API_KEY = "<if-required>"
+
+payload = {
+  "profile": {
+    "borrower_id": "b1",
+    "income_monthly": 9000,
+    "debts_monthly": 800,
+    "fico": 700,
+    "home_price": 500000,
+    "down_payment": 100000,
+    "interest_rate": 0.065,
+    "prop_tax_monthly": 300,
+    "insurance_monthly": 120
+  },
+  "calc": {},
+  "policy_flags": [],
+  "docs": []
+}
+
+r = requests.post(
+    f"{BASE_URL}/graphs/mortgage-prequal/invoke",
+    headers={"Content-Type":"application/json","Authorization":f"Bearer {API_KEY}"},
+    data=json.dumps(payload)
+)
+print(r.status_code, r.text)
+
+
+Mortgage Refi — Rate Monitoring & Alerts
+
+{
+  "loans": [
+    {"borrower_id":"b1","loan_balance":400000,"current_rate":0.065,"remaining_term_months":300},
+    {"borrower_id":"b2","loan_balance":280000,"current_rate":0.072,"remaining_term_months":240}
+  ],
+  "rates": [
+    {"date":"2025-08-13","term_months":360,"rate":0.058},
+    {"date":"2025-08-13","term_months":240,"rate":0.055},
+    {"date":"2025-08-13","term_months":300,"rate":0.057}
+  ],
+  "market_rate": 0.0,
+  "savings": [],
+  "alerts": []
+}
+
+
+cURL
+
+curl -X POST "$BASE_URL/graphs/mortgage-refi/invoke" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $API_KEY" \
+  -d @- <<'JSON'
+{
+  "loans": [
+    {"borrower_id":"b1","loan_balance":400000,"current_rate":0.065,"remaining_term_months":300},
+    {"borrower_id":"b2","loan_balance":280000,"current_rate":0.072,"remaining_term_months":240}
+  ],
+  "rates": [
+    {"date":"2025-08-13","term_months":360,"rate":0.058},
+    {"date":"2025-08-13","term_months":240,"rate":0.055},
+    {"date":"2025-08-13","term_months":300,"rate":0.057}
+  ],
+  "market_rate": 0.0,
+  "savings": [],
+  "alerts": []
+}
+JSON
+
+
+Python code 
+
+import requests, json
+BASE_URL = "https://<your-domain>"
+API_KEY = "<if-required>"
+
+payload = {
+  "loans": [
+    {"borrower_id":"b1","loan_balance":400000,"current_rate":0.065,"remaining_term_months":300},
+    {"borrower_id":"b2","loan_balance":280000,"current_rate":0.072,"remaining_term_months":240}
+  ],
+  "rates": [
+    {"date":"2025-08-13","term_months":360,"rate":0.058},
+    {"date":"2025-08-13","term_months":240,"rate":0.055},
+    {"date":"2025-08-13","term_months":300,"rate":0.057}
+  ],
+  "market_rate": 0.0,
+  "savings": [],
+  "alerts": []
+}
+
+r = requests.post(
+    f"{BASE_URL}/graphs/mortgage-refi/invoke",
+    headers={"Content-Type":"application/json","Authorization":f"Bearer {API_KEY}"},
+    data=json.dumps(payload)
+)
+print(r.status_code, r.text)
+
+
